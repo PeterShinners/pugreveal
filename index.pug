@@ -1,0 +1,26 @@
+doctype html 
+html(lang='en')
+  head
+    title Presentation
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel="stylesheet" href="reveal/reset.css")
+    link(rel="stylesheet" href="reveal/reveal.css")
+    link(rel="stylesheet" href="reveal/theme/serif.css")
+    link(rel="stylesheet" href="reveal/plugin/highlight/monokai.css")
+
+  body
+    .reveal
+      .slides 
+        include slides.pug
+    
+    script(src="reveal/reveal.js")
+    script(src="reveal/plugin/highlight/highlight.js")
+    script(src="reveal/plugin/zoom/zoom.js")
+    script.
+      Reveal.initialize({
+        controls: true,
+        slideNumber: true,
+        center: true,  // vertical
+        hash: true,  // slide numbers in url
+        plugins: [ RevealHighlight, RevealZoom ]
+      });
